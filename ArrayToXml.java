@@ -11,13 +11,13 @@ package toxml_interface;
 public class ArrayToXml {
    static String getXml(ToXmlable[] toXML){
 
-      StringBuilder sb = new StringBuilder("<EmployeeObject>\n");
+      StringBuilder sb = new StringBuilder("<EmployeeObject>\r\n");
       
       for(ToXmlable t : toXML) {
          sb.append(t.toXmlString());         
       }
       
-      sb.append("</EmployeeObject>\n");
+      sb.append("</EmployeeObject>\r\n");
       
       return sb.toString();
    }
