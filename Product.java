@@ -25,11 +25,11 @@ public class Product implements Comparable, ToXmlable {
    }
 
    public String toXmlString() {
-      return "<Item>\n"
-              + "<Name> " + name + " </Name> \n"
-              + "<Year> " + year + " </Year>\n"
-              + "<City> " + city + " </City>\n"
-              + "</Item>\n";
+      return "   <Item>\r\n"
+              + "      <Name> " + name + " </Name>\r\n"
+              + "      <Year> " + year + " </Year>\r\n"
+              + "      <City> " + city + " </City>\r\n"
+              + "   </Item>\r\n";
    }
 
    public int compareTo(Comparable other) {
