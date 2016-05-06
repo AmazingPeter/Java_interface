@@ -9,7 +9,7 @@ package toxml_interface;
  * @author Shvyrov
  */
 class GetComparables {
-   public static Comparable[] sort(Comparable[] elems) {
+   public static void sort(Comparable[] elems) {
         for(int i = 1;i < elems.length;i++){
             int j = i;
             while((j>=1)&&(elems[i].compareTo(elems[j-1]) != 1))
@@ -23,6 +23,5 @@ class GetComparables {
                 elems[j] = elemi;
             }
         }
-        return elems;
     }
 }
