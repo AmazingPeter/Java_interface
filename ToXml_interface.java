@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package toxml_interface;
+import java.io.*;
 
 /**
  *
@@ -32,6 +33,16 @@ public class ToXml_interface {
       System.out.println("Array as XML: ");
       String xml = ArrayToXml.getXml(toXmlables);
       System.out.println(xml);
+      
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("OutputJavaFile.txt")))
+        {
+            bw.write(xml);
+            System.out.println("\nВывод информации в файл успешно завершён");
+        }
+        catch(IOException ex){
+
+            System.out.println(ex.getMessage());
+        }
 
     }
 }
